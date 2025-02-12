@@ -3,19 +3,57 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #e0f4e2;
+  --foreground: #0d1511;
+  --buttonhover:#6a7f72 ;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0d1511;
+    --foreground: #e0f4e2;
+    --buttonhover:#6a7f72 ;
   }
+}
+
+html.dark {
+  --background: #0d1511;
+  --foreground: #e0f4e2;
+  --buttonhover:#6a7f72 ;
+}
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.star{
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, transparent 1%, var(--foreground) 100%);
+  z-index: 1;
+}
+
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  height: 100vh; /* Altura completa del viewport */
+  overflow-y: scroll; /* Permitir desplazamiento */
+}
+
+.scroll-section {
+  scroll-snap-align: start;
+  height: 100vh; /* Altura completa para cada sección */
+}
+
+[data-aos] {
+  position: relative !important;
+  z-index: 1 !important;
 }
