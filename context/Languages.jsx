@@ -97,34 +97,49 @@ const languageData = {
     },
 };
 
-const LanguagesContext = createContext()
+const LanguagesContext = createContext();
 
-
-export const LanguagesProvider = ({children}) => {
+export const LanguagesProvider = ({ children }) => {
     const [language, setLanguage] = useState("es");
+    const [error, setError] = useState(null); 
 
     useEffect(() => {
-        const storedLanguage = localStorage.getItem("language") || "es";
-        setLanguage(storedLanguage);
+        try {
+            const storedLanguage = localStorage.getItem("language") || "es";
+            setLanguage(storedLanguage);
+        } catch (e) {
+            setError("Error al cargar el idioma del almacenamiento local");
+            console.error(e); 
+        }
     }, []);
 
     const toggleLanguage = () => {
-        const newLanguage = language === "es" ? "en" : "es";
-        localStorage.setItem("language", newLanguage);
-        if (newLanguage === "es") {
-            document.documentElement.classList.add("en");
-        } else {
-            document.documentElement.classList.remove("en");
+        try {
+            const newLanguage = language === "es" ? "en" : "es";
+            localStorage.setItem("language", newLanguage);
+            if (newLanguage === "es") {
+                document.documentElement.classList.add("en");
+            } else {
+                document.documentElement.classList.remove("en");
+            }
+            setLanguage(newLanguage);
+        } catch (e) {
+            setError("Error al cambiar el idioma");
+            console.error(e); // Log de error si es necesario
         }
-        setLanguage(newLanguage); // Actualizamos el estado con el idioma correcto
     };
+
     const selectedLanguageData = languageData[language];
-    
+
+    if (!selectedLanguageData) {
+        setError("Idioma no disponible");
+    }
+
     return (
-        <LanguagesContext.Provider value={{ selectedLanguageData, language, toggleLanguage }}>
+        <LanguagesContext.Provider value={{ selectedLanguageData, language, toggleLanguage, error }}>
             {children}
         </LanguagesContext.Provider>
-    )
-}
+    );
+};
 
 export const useLanguages = () => useContext(LanguagesContext);
