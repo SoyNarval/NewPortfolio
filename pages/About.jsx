@@ -4,8 +4,9 @@ import { useLanguages } from '../context/Languages'
 
 export default function About() {
 
-    const { selectedLanguageData } = useLanguages();
-    const { aboutMe, contact } = selectedLanguageData;
+    const { selectedLanguageData = {} } = useLanguages();
+    const { aboutMe = {}, contact = {} } = selectedLanguageData;
+
 
     return (
         <div className='flex flex-col w-full items-center p-8 gap-2'>
