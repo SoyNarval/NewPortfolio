@@ -1,20 +1,20 @@
-import React from 'react';
-import { useLanguages } from '../context/Languages';
+"use client"
+import React from 'react'
+import { useLanguages } from '../context/Languages'
 
 export default function About() {
-    const { selectedLanguageData, error } = useLanguages();
 
-    // Si hay un error, mostrarlo
+    const { selectedLanguageData, error } = useLanguages() || {};
     if (error) {
         return <div>Error: {error}</div>;
     }
 
-    // Si los datos no están disponibles (cuando se está cargando), mostrar un mensaje
     if (!selectedLanguageData) {
         return <div>Cargando...</div>; 
     }
 
     const { aboutMe = {}, contact = {} } = selectedLanguageData;
+
 
     return (
         <div className='flex flex-col w-full items-center p-8 gap-2'>
@@ -40,7 +40,9 @@ export default function About() {
                         <a className='flex items-center justify-center text-lg' download={"Curriculum-Ignacio-Pelayo"} href='/cv.pdf'>{aboutMe.cv} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width='1em' height='1em'><path fill="currentColor" d="M5 20h14v-2H5zM19 9h-4V3H9v6H5l7 7z"/></svg></a>
                     </div>
                 </div>
+                
             </div>
         </div>
-    );
+
+    )
 }

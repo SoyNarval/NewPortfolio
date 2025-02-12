@@ -2,7 +2,7 @@ import React from 'react'
 import { useLanguages } from '../context/Languages'
 
 export default function Projects() {
-  const { selectedLanguageData, error } = useLanguages();
+  const { selectedLanguageData, error } = useLanguages() || {};
   const { projects = {} } = selectedLanguageData || {};
 
   if (error) {
