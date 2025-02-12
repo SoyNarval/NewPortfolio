@@ -4,7 +4,7 @@ import { useLanguages } from '../context/Languages'
 
 export default function About() {
 
-    const { selectedLanguageData = {} } = useLanguages();
+    const { selectedLanguageData = {} } = useLanguages() || {};
     const { aboutMe = {}, contact = {} } = selectedLanguageData;
 
 

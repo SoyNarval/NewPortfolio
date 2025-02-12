@@ -3,7 +3,7 @@ import { useLanguages } from '../context/Languages'
 
 export default function Capacities() {
 
-  const { selectedLanguageData={} } = useLanguages();
+  const { selectedLanguageData={} } = useLanguages() || {};;
   const { capacities={} } = selectedLanguageData;
 
   return (
