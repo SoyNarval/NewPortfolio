@@ -3,8 +3,8 @@ import { useLanguages } from '../context/Languages'
 
 export default function Capacities() {
 
-  const { selectedLanguageData } = useLanguages();
-  const { capacities } = selectedLanguageData;
+  const { selectedLanguageData={} } = useLanguages();
+  const { capacities={} } = selectedLanguageData;
 
   return (
     <div className='flex flex-col w-full h-screen items-center gap-4 p-8 !z-0'>
