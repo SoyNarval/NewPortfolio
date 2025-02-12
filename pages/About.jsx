@@ -4,7 +4,15 @@ import { useLanguages } from '../context/Languages'
 
 export default function About() {
 
-    const { selectedLanguageData = {} } = useLanguages() || {};
+    const { selectedLanguageData, error } = useLanguages();
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
+    if (!selectedLanguageData) {
+        return <div>Cargando...</div>; 
+    }
+
     const { aboutMe = {}, contact = {} } = selectedLanguageData;
 
 

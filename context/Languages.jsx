@@ -101,15 +101,15 @@ const LanguagesContext = createContext();
 
 export const LanguagesProvider = ({ children }) => {
     const [language, setLanguage] = useState("es");
-    const [error, setError] = useState(null); 
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         try {
             const storedLanguage = localStorage.getItem("language") || "es";
             setLanguage(storedLanguage);
         } catch (e) {
-            setError("Error al cargar el idioma del almacenamiento local");
-            console.error(e); 
+            setError("Error al cargar el idioma desde el almacenamiento local");
+            console.error(e);
         }
     }, []);
 
@@ -125,15 +125,11 @@ export const LanguagesProvider = ({ children }) => {
             setLanguage(newLanguage);
         } catch (e) {
             setError("Error al cambiar el idioma");
-            console.error(e); // Log de error si es necesario
+            console.error(e);
         }
     };
 
-    const selectedLanguageData = languageData[language];
-
-    if (!selectedLanguageData) {
-        setError("Idioma no disponible");
-    }
+    const selectedLanguageData = languageData[language] || languageData["es"];
 
     return (
         <LanguagesContext.Provider value={{ selectedLanguageData, language, toggleLanguage, error }}>

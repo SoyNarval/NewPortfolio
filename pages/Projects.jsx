@@ -2,9 +2,16 @@ import React from 'react'
 import { useLanguages } from '../context/Languages'
 
 export default function Projects() {
-  
-  const { selectedLanguageData={} } = useLanguages() || {};;
-  const { projects={} } = selectedLanguageData;
+  const { selectedLanguageData, error } = useLanguages();
+  const { projects = {} } = selectedLanguageData || {};
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  if (!selectedLanguageData) {
+    return <div>Cargando...</div>; 
+  }
   return (
     <div className='flex flex-col w-full h-screen items-center gap-12 p-8 md:scroll-smooth'>
 
