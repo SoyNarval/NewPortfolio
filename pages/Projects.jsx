@@ -20,7 +20,7 @@ export default function Projects() {
         <div className='grid grid-cols-2 gap-12 justify-between w-full h-full p-4'>
 
           <div data-aos="fade-up" className='flex flex-col gap-4 justify-center'>
-            <div className='flex justify-between'>
+            <div className='flex justify-between max-md:flex-col gap-4'>
               <h2 className='text-xl font-bold'>{projects.twitter.title}</h2>
               <div className='flex gap-4 itmes-center'>
                 <a className='flex items-center justify-center' href='https://copia-twitter.vercel.app/' target='_blank'>
@@ -36,7 +36,7 @@ export default function Projects() {
           </div>
 
           <div data-aos="fade-up" className='flex flex-col gap-4 justify-center '>
-            <div className='flex justify-between'>
+            <div className='flex justify-between max-md:flex-col gap-4'>
               <h2 className='text-xl font-bold'>{projects.claqueta.title}</h2>
               <div className='flex gap-4 itmes-center'>
                 <a className='flex items-center justify-center' href='https://claqueta-magica.vercel.app/' target='_blank'>
@@ -52,7 +52,7 @@ export default function Projects() {
           </div>
 
           <div data-aos="fade-up" className='flex flex-col gap-4 justify-center '>
-            <div className='flex justify-between'>
+            <div className='flex justify-between max-md:flex-col gap-4'>
               <h2 className='text-xl font-bold'>{projects.salon.title}</h2>
               <div className='flex gap-4 itmes-center'>
                 <a className='flex items-center justify-center' href='https://github.com/SoyNarval/appsalon-mvc-php-sass' target='_blank'>
@@ -65,7 +65,7 @@ export default function Projects() {
           </div>
           
           <div data-aos="fade-up" className='flex flex-col gap-4 justify-center '>
-            <div className='flex justify-between'>
+            <div className='flex justify-between max-md:flex-col gap-4'>
               <h2 className='text-xl font-bold'>{projects.bienes.title}</h2>
               <div className='flex gap-4 itmes-center'>
                 <a className='flex items-center justify-center' href='' target='_blank'>
