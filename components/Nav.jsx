@@ -26,7 +26,7 @@ export default function Nav({ refAbout, refCap, refProj }) {
 
   return (
     <>
-      <div className={`absolute top-0 left-0 z-50 md:hidden bg-background`}>
+      <div className={`absolute top-0 left-0 z-50 md:hidden bg-transparent`}>
         <NavThoggleButton
           setIsOpen={setIsOpen}
           isOpen={isOpen}
@@ -34,7 +34,7 @@ export default function Nav({ refAbout, refCap, refProj }) {
       </div>
       <div 
         className={`flex flex-col items-center justify-between h-screen p-4 w-full sticky top-0 max-md:w-screen max-md:fixed max-md:bg-background 
-        ${isOpen ? 'max-md:translate-x-0' : 'max-md:-translate-x-full'} transition-transform duration-300 ease-in-out bg-background !z-50`}
+        ${isOpen ? 'max-md:translate-x-0' : 'max-md:-translate-x-full'} transition-transform duration-300 ease-in-out bg-background `}
       >
         <div className='flex flex-col text-center items-center justify-center gap-2'>
             <h1 className='text-xl font-bold'>Ignacio Pelayo</h1>

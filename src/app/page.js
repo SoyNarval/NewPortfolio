@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex h-full w-screen">
+      <div className="flex h-full w-screen relative">
         <div className="h-full w-1/5 sticky top-0 left-0 z-50">
           <Nav
             refAbout={refAbout}
