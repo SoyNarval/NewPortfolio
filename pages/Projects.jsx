@@ -13,7 +13,7 @@ export default function Projects() {
     return <div>Cargando...</div>; 
   }
   return (
-    <div className='flex flex-col w-full h-screen items-center gap-12 p-8 md:scroll-smooth'>
+    <div className='flex flex-col w-full h-screen items-center gap-12 p-8 max-md:p-0'>
 
         <h1 className='text-4xl font-bold'>{projects.title}</h1>
 
@@ -77,7 +77,9 @@ export default function Projects() {
             <p>{projects.bienes.description}</p>
           </div>
         </div>
+
         <a href='https://github.com/SoyNarval?tab=repositories' target='_blanket' className='text-xl font-bold'>{projects.more}</a>
+
     </div>
   )
 }

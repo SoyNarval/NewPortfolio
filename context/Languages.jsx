@@ -26,7 +26,7 @@ const languageData = {
             languages: "Languages",
             en: "English Level: C",
             es: "Spanish Level: Native",
-            cz: "Czech Level: Iniciandome",
+            cz: "Czech Level: Getting started",
         },
         projects: {
             title: "Projects",
@@ -72,7 +72,7 @@ const languageData = {
             languages: "Idiomas",
             en: "Inglés Nivel: C",
             es: "Español Nivel: Nativo",
-            cz: "Checo Nivel: Getting started",
+            cz: "Checo Nivel: Iniciandome",
         },
         projects: {
             title: "Proyectos",

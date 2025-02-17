@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
       <div className="flex h-full w-screen relative">
-        <div className="h-full w-1/5 sticky top-0 left-0 z-50">
+        <div className="h-screen w-1/5 sticky top-0 left-0 z-50 max-md:h-svh">
           <Nav
             refAbout={refAbout}
             refCap={refCap}
@@ -33,7 +33,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="flex flex-col w-4/5 max-md:w-screen">
+        <div className="flex flex-col w-4/5 max-md:w-screen max-md:gap-4">
           <div ref={refAbout} className="h-screen w-full max-md:w-screen">
             <About/>
           </div>
