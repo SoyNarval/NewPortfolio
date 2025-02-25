@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useLanguages } from '../context/Languages'
 import ThemeToggleButton from './ThemeToggleButton';
 import NavThoggleButton from './NavThoggleButton';
@@ -22,7 +22,29 @@ export default function Nav({ refAbout, refCap, refProj }) {
     }
   }
 
+  useEffect(() => {
+    const handleScroll = (e) => {
+      if (isOpen) {
+        e.preventDefault();
+      }
+    };
 
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      document.addEventListener("touchmove", handleScroll, { passive: false });
+      document.addEventListener("wheel", handleScroll, { passive: false });
+    } else {
+      document.body.style.overflow = "";
+      document.removeEventListener("touchmove", handleScroll);
+      document.removeEventListener("wheel", handleScroll);
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+      document.removeEventListener("touchmove", handleScroll);
+      document.removeEventListener("wheel", handleScroll);
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -33,7 +55,7 @@ export default function Nav({ refAbout, refCap, refProj }) {
         />
       </div>
       <div 
-        className={`flex flex-col items-center justify-between h-screen p-4 w-full sticky top-0 max-md:w-screen max-md:fixed max-md:bg-background 
+        className={`flex flex-col items-center justify-between h-screen p-4 w-full sticky top-0 max-md:w-screen max-md:absolute
         ${isOpen ? 'max-md:translate-x-0' : 'max-md:-translate-x-full'} transition-transform duration-300 ease-in-out bg-background `}
       >
         <div className='flex flex-col text-center items-center justify-center gap-2'>

@@ -13,7 +13,7 @@ export default function Projects() {
     return <div>Cargando...</div>; 
   }
   return (
-    <div className='flex flex-col w-full h-screen items-center gap-12 p-8 max-md:p-0'>
+    <div className='flex flex-col w-full h-full items-center gap-12 p-8 max-md:p-0'>
 
         <h1 className='text-4xl font-bold'>{projects.title}</h1>
 
