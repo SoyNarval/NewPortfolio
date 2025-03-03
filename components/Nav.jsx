@@ -55,7 +55,7 @@ export default function Nav({ refAbout, refCap, refProj }) {
         />
       </div>
       <div 
-        className={`flex flex-col items-center justify-between h-screen p-4 w-full sticky top-0 max-md:w-screen max-md:absolute
+        className={`flex flex-col items-center justify-between h-dvh p-4 w-full sticky top-0 max-md:w-screen max-md:absolute
         ${isOpen ? 'max-md:translate-x-0' : 'max-md:-translate-x-full'} transition-transform duration-300 ease-in-out bg-background `}
       >
         <div className='flex flex-col text-center items-center justify-center gap-2'>
