@@ -32,7 +32,7 @@ const languageData = {
             title: "Projects",
             twitter: {
                 title: "Twitter copy",
-                description: "A modern copy of Twitter's userface using NextJS. TailwindCSS and React where you can tweet, repy, like, retweet, and custom hooks.",
+                description: "A modern copy of Twitter's userface using NextJS, TailwindCSS, React and custom hooks where you can tweet, repy, like and retweet.",
             },
             claqueta: {
                 title: "Claqueta Mágica",
@@ -42,9 +42,9 @@ const languageData = {
                 title: "App Salon",
                 description: "App for a beauty salon where you can request a quote or enter as an administrator to manage it using Sass, JavaScript, PHP and SQL.",
             },
-            bienes: {
-                title: "App Bienes",
-                description: "App for a root business where you can create new homes or view the ones that already exist using Sass, JavaScript, PHP and SQL.",
+            migracion: {
+                title: "Bank Migration",
+                description: "COBOL app for a bank migration using COBOL's mainframe, DB2 and JCL. EOI Capstone Project.",
             },
             more: "See more"
         },
@@ -72,25 +72,25 @@ const languageData = {
             languages: "Idiomas",
             en: "Inglés Nivel: C",
             es: "Español Nivel: Nativo",
-            cz: "Checo Nivel: Iniciandome",
+            cz: "Checo Nivel: Iniciándome",
         },
         projects: {
             title: "Proyectos",
             twitter: {
                 title: "Copia de Twitter",
-                description: "Una copia moderna de la interfaz de Twitter usando NextJS. TailwindCSS y React donde puedes tweetear, responder, dar me gusta, retweetear y custom hooks.",
+                description: "Una copia moderna de la interfaz de Twitter usando NextJS, TailwindCSS, React y custom hooks donde puedes tweetear, responder, dar me gusta y retweetear.",
             },
             claqueta: {
                 title: "Claqueta Mágica",
-                description: "Página de películas ustilizando la API OMDb implementando una tienda funcional, lista de deseos y buscador de películas con React, NextJS, TailwindCSS y más.",
+                description: "Página de películas utilizando la API OMDb implementando una tienda funcional, lista de deseos y buscador de películas con React, NextJS, TailwindCSS y más.",
             },
             salon: {
                 title: "App Salón",
                 description: "Aplicación para la gestión de un salón de belleza en la que se puede pedir cita o entrar como aministrador para gestionarlo usando Sass, JavaScript, PHP y SQL.",
             },
-            bienes: {
-                title: "App Bienes",
-                description: "Aplicación para un negocio de bienes raíces donde puedes crear nuevas viviendas o ver las que ya existen usando Sass, JavaScript, PHP y SQL.",
+            migracion: {
+                title: "Migración Bancaria",
+                description: "Aplicación COBOL para una migración bancaria utilizando el mainframe de COBOL, DB2 y JCL. Proyecto final del curso de la EOI.",
             },
             more: "Ver más"
         },

@@ -29,6 +29,7 @@ export default function Capacities() {
             <h2 className='flex p-6 border border-slate-400 justify-center'>PHP</h2>
             <h2 className='flex p-6 border border-slate-400 justify-center'>Java</h2>
             <h2 className='flex p-6 border border-slate-400 justify-center'>C++</h2>
+            <h2 className='flex p-6 border border-slate-400 justify-center'>COBOL</h2>
           </div>
         </div>
 
